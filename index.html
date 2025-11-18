@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nibble - Discover Restaurants by Mood</title>
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo">Nibble</div>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="browse.html">Browse</a></li>
+          <li><a href="partner-landing.html">For Restaurants</a></li>
+          <li><a href="#" id="sign-in-btn" class="sign-in-link">Sign In</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">Discover Restaurants by Mood, Not Menu</h1>
+        <p class="hero-subtitle">Find the perfect place in under 60 seconds</p>
+        <button class="cta-button"
+          onclick="document.querySelector('.mood-section').scrollIntoView({behavior: 'smooth'})">Get Started</button>
+      </div>
+    </section>
+
+    <!-- Mood Selection Section -->
+    <section class="mood-section">
+      <div class="container">
+        <h2 class="section-title">How Are You Feeling?</h2>
+        <div class="mood-grid">
+          <div class="mood-card" onclick="selectMood('romantic')">
+            <div class="mood-emoji">🥰</div>
+            <h3>Romantic</h3>
+            <p>Candlelit vibes</p>
+          </div>
+          <div class="mood-card" onclick="selectMood('celebrate')">
+            <div class="mood-emoji">🎉</div>
+            <h3>Celebrate</h3>
+            <p>Party & gathering</p>
+          </div>
+          <div class="mood-card" onclick="selectMood('adventurous')">
+            <div class="mood-emoji">⚡</div>
+            <h3>Adventurous</h3>
+            <p>Try something new</p>
+          </div>
+          <div class="mood-card" onclick="selectMood('quick')">
+            <div class="mood-emoji">🌮</div>
+            <h3>Quick Bite</h3>
+            <p>Fast & satisfying</p>
+          </div>
+          <div class="mood-card" onclick="selectMood('cozy')">
+            <div class="mood-emoji">☕</div>
+            <h3>Cozy</h3>
+            <p>Comfortable & warm</p>
+          </div>
+          <div class="mood-card" onclick="selectMood('casual')">
+            <div class="mood-emoji">🍕</div>
+            <h3>Casual</h3>
+            <p>Relaxed & fun</p>
+          </div>
+          <div class="mood-card" onclick="selectMood('trendy')">
+            <div class="mood-emoji">🎭</div>
+            <h3>Trendy</h3>
+            <p>Instagram-worthy</p>
+          </div>
+          <div class="mood-card" onclick="selectMood('scenic')">
+            <div class="mood-emoji">🏔️</div>
+            <h3>Scenic</h3>
+            <p>Beautiful views</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Restaurants Section -->
+    <section class="featured-section">
+      <div class="container">
+        <h2 class="section-title">Featured Restaurants</h2>
+        <div class="featured-grid">
+          <div class="restaurant-card featured">
+            <div class="restaurant-image placeholder"></div>
+            <div class="restaurant-info">
+              <h3>The French Table</h3>
+              <div class="rating">⭐⭐⭐⭐⭐ 4.8</div>
+              <p class="cuisine">French • $$$ • Romantic, Upscale</p>
+              <button class="secondary-button">View Details</button>
+            </div>
+          </div>
+          <div class="restaurant-card featured">
+            <div class="restaurant-image placeholder"></div>
+            <div class="restaurant-info">
+              <h3>Bella Vista</h3>
+              <div class="rating">⭐⭐⭐⭐½ 4.5</div>
+              <p class="cuisine">Italian • $$ • Rooftop, Scenic</p>
+              <button class="secondary-button">View Details</button>
+            </div>
+          </div>
+          <div class="restaurant-card featured">
+            <div class="restaurant-image placeholder"></div>
+            <div class="restaurant-info">
+              <h3>Waterfront Grill</h3>
+              <div class="rating">⭐⭐⭐⭐ 4.3</div>
+              <p class="cuisine">Seafood • $$$ • Date Night, Views</p>
+              <button class="secondary-button">View Details</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Nibble Section -->
+    <section class="why-section">
+      <div class="container">
+        <h2 class="section-title">Why Nibble?</h2>
+        <div class="benefits-grid">
+          <div class="benefit-item">
+            <div class="benefit-emoji">🎯</div>
+            <h3>Mood-Based Discovery</h3>
+            <p>Find places that match your vibe, not generic recommendations</p>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-emoji">⚡</div>
+            <h3>Fast Decisions</h3>
+            <p>Stop scrolling for 23 minutes. Get a curated match in seconds</p>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-emoji">💝</div>
+            <h3>Curated for You</h3>
+            <p>Personalized recommendations based on your preferences and history</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- For Restaurant Owners Section -->
+    <section class="restaurant-owners-section">
+      <div class="container">
+        <h2 class="section-title">For Restaurant Owners</h2>
+        <p class="section-subtitle">Reach customers when they're ready to decide</p>
+        <div class="owner-ctas">
+          <button class="cta-button">Learn More</button>
+          <button class="secondary-button">Partner Sign Up</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>About</h4>
+          <a href="#">Company</a>
+          <a href="#">Blog</a>
+        </div>
+        <div class="footer-section">
+          <h4>Support</h4>
+          <a href="#">Contact</a>
+          <a href="#">FAQ</a>
+        </div>
+        <div class="footer-section">
+          <h4>For Restaurants</h4>
+          <a href="partner-landing.html">Partner Portal</a>
+          <a href="#">Pricing</a>
+        </div>
+        <div class="footer-section">
+          <h4>Legal</h4>
+          <a href="#">Terms</a>
+          <a href="#">Privacy</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Nibble. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Sign In Modal -->
+    <div id="signInModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Sign In</h2>
+        <form>
+          <input type="email" placeholder="Email" required>
+          <input type="password" placeholder="Password" required>
+          <button type="submit" class="cta-button">Sign In</button>
+        </form>
+        <p class="modal-text">Don't have an account? <a href="#">Create one</a></p>
+      </div>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+
+</html>

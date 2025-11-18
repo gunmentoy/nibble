@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partner Dashboard - Nibble</title>
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+
+  <body>
+    <!-- Partner Navigation -->
+    <nav class="navbar partner-nav">
+      <div class="nav-container">
+        <div class="logo"><a href="index.html">Nibble Partner Portal</a></div>
+        <div class="partner-user">
+          <span>The French Table</span>
+          <button id="partner-menu-btn" class="partner-menu-btn">▼</button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Partner Layout -->
+    <div class="partner-container">
+      <!-- Sidebar -->
+      <aside class="partner-sidebar">
+        <nav class="partner-nav-menu">
+          <a href="#" class="partner-nav-item active" onclick="switchPartnerTab('dashboard')">📊 Dashboard</a>
+          <a href="#" class="partner-nav-item" onclick="switchPartnerTab('profile')">📝 Edit Profile</a>
+          <a href="#" class="partner-nav-item" onclick="switchPartnerTab('analytics')">📈 Analytics</a>
+          <a href="#" class="partner-nav-item" onclick="switchPartnerTab('billing')">💰 Billing</a>
+          <a href="#" class="partner-nav-item" onclick="switchPartnerTab('settings')">⚙️ Settings</a>
+        </nav>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="partner-content">
+        <!-- Dashboard Tab -->
+        <div id="dashboard" class="partner-tab active">
+          <h1>Dashboard</h1>
+
+          <div class="performance-cards">
+            <div class="perf-card">
+              <div class="perf-number">2,847</div>
+              <p>Views This Month</p>
+            </div>
+            <div class="perf-card">
+              <div class="perf-number">341</div>
+              <p>Clicks</p>
+            </div>
+            <div class="perf-card">
+              <div class="perf-number">127</div>
+              <p>Favorites</p>
+            </div>
+            <div class="perf-card">
+              <div class="perf-number">12%</div>
+              <p>Click-Through Rate</p>
+            </div>
+          </div>
+
+          <div class="plan-card">
+            <h3>💎 Current Plan: Featured Placement</h3>
+            <p class="plan-price">$75/month</p>
+            <ul class="plan-features">
+              <li>✓ Priority in mood collections</li>
+              <li>✓ Enhanced listing</li>
+              <li>✓ Analytics dashboard</li>
+            </ul>
+            <div class="plan-actions">
+              <button class="secondary-button">Upgrade Plan</button>
+              <button class="secondary-button">Manage Billing</button>
+            </div>
+          </div>
+
+          <div class="chart-section">
+            <h3>Views Over Time (30 Days)</h3>
+            <div class="placeholder" style="height: 300px;">Chart Placeholder</div>
+          </div>
+
+          <div class="insights-section">
+            <h3>Top Moods Driving Traffic</h3>
+            <div class="insights-list">
+              <div class="insight-item">
+                <span>🥰 Romantic</span>
+                <span class="insight-percent">42%</span>
+              </div>
+              <div class="insight-item">
+                <span>🎉 Celebrate</span>
+                <span class="insight-percent">28%</span>
+              </div>
+              <div class="insight-item">
+                <span>🎭 Trendy</span>
+                <span class="insight-percent">18%</span>
+              </div>
+              <div class="insight-item">
+                <span>Other</span>
+                <span class="insight-percent">12%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Profile Tab -->
+        <div id="profile" class="partner-tab">
+          <h1>Edit Profile</h1>
+
+          <form class="profile-form">
+            <div class="form-group">
+              <label>Restaurant Name</label>
+              <input type="text" value="The French Table">
+            </div>
+
+            <div class="form-group">
+              <label>Description</label>
+              <textarea
+                rows="4">Intimate French bistro featuring candlelit tables, live piano music, and a carefully curated wine list.</textarea>
+            </div>
+
+            <div class="form-group">
+              <label>Address</label>
+              <input type="text" value="123 Granville St, Vancouver, BC">
+            </div>
+
+            <div class="form-group">
+              <label>Phone</label>
+              <input type="tel" value="(604) 555-0123">
+            </div>
+
+            <div class="form-group">
+              <label>Website</label>
+              <input type="url" value="https://thefrenchta.com">
+            </div>
+
+            <div class="form-group">
+              <label>Cuisine Type</label>
+              <select>
+                <option>French</option>
+                <option>Italian</option>
+                <option>Sushi</option>
+                <option>Seafood</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Price Range</label>
+              <select>
+                <option>$$$</option>
+                <option>$$</option>
+                <option>$</option>
+              </select>
+            </div>
+
+            <button type="submit" class="cta-button">Save Changes</button>
+          </form>
+        </div>
+
+        <!-- Analytics Tab -->
+        <div id="analytics" class="partner-tab">
+          <h1>Detailed Analytics</h1>
+
+          <div class="analytics-grid">
+            <div class="analytics-card">
+              <h4>Total Views</h4>
+              <div class="placeholder" style="height: 200px;">Chart</div>
+            </div>
+            <div class="analytics-card">
+              <h4>Click-Through Rate</h4>
+              <div class="placeholder" style="height: 200px;">Chart</div>
+            </div>
+            <div class="analytics-card">
+              <h4>Favorite Adds</h4>
+              <div class="placeholder" style="height: 200px;">Chart</div>
+            </div>
+            <div class="analytics-card">
+              <h4>Traffic by Mood</h4>
+              <div class="placeholder" style="height: 200px;">Chart</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Billing Tab -->
+        <div id="billing" class="partner-tab">
+          <h1>Billing & Subscription</h1>
+
+          <div class="billing-card">
+            <h3>Current Subscription</h3>
+            <p><strong>Featured Placement</strong> - $75/month</p>
+            <p class="billing-date">Renewal Date: December 18, 2025</p>
+            <div class="billing-actions">
+              <button class="secondary-button">Change Plan</button>
+              <button class="secondary-button">Cancel Subscription</button>
+            </div>
+          </div>
+
+          <div class="billing-history">
+            <h3>Billing History</h3>
+            <table class="billing-table">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Plan</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Nov 18, 2025</td>
+                  <td>Featured Placement</td>
+                  <td>$75.00</td>
+                  <td>Paid</td>
+                </tr>
+                <tr>
+                  <td>Oct 18, 2025</td>
+                  <td>Featured Placement</td>
+                  <td>$75.00</td>
+                  <td>Paid</td>
+                </tr>
+                <tr>
+                  <td>Sep 18, 2025</td>
+                  <td>Featured Placement</td>
+                  <td>$75.00</td>
+                  <td>Paid</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Settings Tab -->
+        <div id="settings" class="partner-tab">
+          <h1>Settings</h1>
+
+          <div class="settings-section">
+            <h3>Account Settings</h3>
+            <div class="setting-item">
+              <div>
+                <h4>Email Notifications</h4>
+                <p>Receive alerts about your restaurant performance</p>
+              </div>
+              <input type="checkbox" checked>
+            </div>
+          </div>
+
+          <div class="settings-section">
+            <h3>Danger Zone</h3>
+            <button class="remove-btn">Deactivate Account</button>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Support</h4>
+          <a href="#">Help Center</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="footer-section">
+          <h4>Legal</h4>
+          <a href="#">Terms</a>
+          <a href="#">Privacy</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Nibble Partner Portal. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+
+</html>

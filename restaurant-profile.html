@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Profile - Nibble</title>
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo"><a href="index.html">Nibble</a></div>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="browse.html">Browse</a></li>
+          <li><a href="partner-landing.html">For Restaurants</a></li>
+          <li><a href="#" id="sign-in-btn" class="sign-in-link">Sign In</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Restaurant Hero Gallery -->
+    <section class="restaurant-gallery">
+      <div class="gallery-container">
+        <div class="main-image placeholder"></div>
+        <div class="gallery-thumbs">
+          <div class="thumb placeholder"></div>
+          <div class="thumb placeholder"></div>
+          <div class="thumb placeholder"></div>
+          <div class="thumb placeholder"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Restaurant Info -->
+    <section class="restaurant-info-section">
+      <div class="container">
+        <div class="restaurant-header">
+          <div>
+            <h1>The French Table</h1>
+            <div class="rating-large">⭐⭐⭐⭐⭐ 4.8 (127 Google Reviews)</div>
+            <p class="cuisine-tags">French Cuisine • $$$ • Romantic, Upscale</p>
+          </div>
+          <button class="favorite-btn-large" onclick="toggleFavorite(this)">🤍 Save</button>
+        </div>
+
+        <div class="restaurant-details">
+          <div class="detail-item">
+            <span class="detail-icon">📍</span>
+            <span>123 Granville St, Vancouver, BC</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-icon">🕐</span>
+            <span>Open Now • Closes at 11 PM</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-icon">📞</span>
+            <span>(604) 555-0123</span>
+          </div>
+        </div>
+
+        <div class="action-buttons">
+          <button class="cta-button" onclick="openGoogleMaps()">🗺️ Directions</button>
+          <button class="cta-button" onclick="openWebsite()">🌐 Website</button>
+          <button class="cta-button" onclick="bookTable()">📅 Book Table</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+      <div class="container">
+        <h2>About</h2>
+        <p>Intimate French bistro featuring candlelit tables, live piano music, and a carefully curated wine list.
+          Perfect for anniversaries and special occasions. Our chef specializes in classic French cuisine with modern
+          twists.</p>
+      </div>
+    </section>
+
+    <!-- Highlights Section -->
+    <section class="highlights-section">
+      <div class="container">
+        <h2>Highlights</h2>
+        <div class="highlights-grid">
+          <div class="highlight">Outdoor Seating</div>
+          <div class="highlight">Accepts Reservations</div>
+          <div class="highlight">Wheelchair Access</div>
+          <div class="highlight">Full Bar</div>
+          <div class="highlight">Live Music (Fri-Sat)</div>
+          <div class="highlight">Private Dining</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu Preview Section -->
+    <section class="menu-section">
+      <div class="container">
+        <h2>Menu Preview</h2>
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="menu-image placeholder"></div>
+            <h4>Coq au Vin</h4>
+            <p>Braised chicken with red wine reduction</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-image placeholder"></div>
+            <h4>Beef Bourguignon</h4>
+            <p>Tender beef in rich wine sauce</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-image placeholder"></div>
+            <h4>Crème Brûlée</h4>
+            <p>Classic French dessert with caramelized top</p>
+          </div>
+        </div>
+        <div class="menu-cta">
+          <button class="secondary-button">View Full Menu →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location Map Section -->
+    <section class="location-section">
+      <div class="container">
+        <h2>Location</h2>
+        <div class="map-container">
+          <div class="placeholder" style="height: 400px;">Google Maps Embed</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Similar Places Section -->
+    <section class="similar-section">
+      <div class="container">
+        <h2>Similar Places You Might Like</h2>
+        <div class="similar-grid">
+          <div class="similar-card">
+            <div class="similar-image placeholder"></div>
+            <h4>Restaurant X</h4>
+            <p class="rating">⭐⭐⭐⭐⭐</p>
+          </div>
+          <div class="similar-card">
+            <div class="similar-image placeholder"></div>
+            <h4>Restaurant Y</h4>
+            <p class="rating">⭐⭐⭐⭐</p>
+          </div>
+          <div class="similar-card">
+            <div class="similar-image placeholder"></div>
+            <h4>Restaurant Z</h4>
+            <p class="rating">⭐⭐⭐⭐½</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>About</h4>
+          <a href="#">Company</a>
+          <a href="#">Blog</a>
+        </div>
+        <div class="footer-section">
+          <h4>Support</h4>
+          <a href="#">Contact</a>
+          <a href="#">FAQ</a>
+        </div>
+        <div class="footer-section">
+          <h4>For Restaurants</h4>
+          <a href="partner-landing.html">Partner Portal</a>
+          <a href="#">Pricing</a>
+        </div>
+        <div class="footer-section">
+          <h4>Legal</h4>
+          <a href="#">Terms</a>
+          <a href="#">Privacy</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Nibble. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+
+</html>

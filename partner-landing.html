@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Restaurants - Nibble</title>
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo"><a href="index.html">Nibble</a></div>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="browse.html">Browse</a></li>
+          <li><a href="partner-landing.html" class="active">For Restaurants</a></li>
+          <li><a href="#" id="sign-in-btn" class="sign-in-link">Sign In</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Partner Hero -->
+    <section class="partner-hero">
+      <div class="container">
+        <h1>Reach Customers When They're Ready to Decide</h1>
+        <p class="partner-subtitle">Join 25+ Vancouver restaurants growing with Nibble</p>
+        <button class="cta-button" onclick="scrollToPlans()">View Pricing</button>
+      </div>
+    </section>
+
+    <!-- Why Nibble for Restaurants -->
+    <section class="partner-benefits">
+      <div class="container">
+        <h2>Why Partner with Nibble?</h2>
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <div class="benefit-icon">🎯</div>
+            <h3>Targeted Discovery</h3>
+            <p>Your restaurant appears when customers are actively searching by mood, not buried in algorithms</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">💰</div>
+            <h3>30-40% Cheaper Than Competitors</h3>
+            <p>Lower cost per click than Google Ads or Yelp. No hidden fees.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">📊</div>
+            <h3>Real-Time Analytics</h3>
+            <p>Track views, clicks, favorites, and customer preferences instantly</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">🔗</div>
+            <h3>Seamless Reservations</h3>
+            <p>Direct links to your booking system. No extra steps for customers.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">🌐</div>
+            <h3>Local Focus</h3>
+            <p>Focus on Metro Vancouver market where you operate. No wasted ad spend.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">🚀</div>
+            <h3>Growth Potential</h3>
+            <p>Early access to expanded features as we grow to other Canadian cities</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+      <div class="container">
+        <h2>How It Works</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <h3>Free Listing</h3>
+            <p>Get listed for free. Users discover you when browsing their mood.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <h3>Optional Advertising</h3>
+            <p>Upgrade to Featured, Sponsored, or Banner placement to increase visibility.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <h3>Track Performance</h3>
+            <p>Monitor clicks, views, and favorites in your partner dashboard.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">4</div>
+            <h3>Grow Revenue</h3>
+            <p>Get more bookings and walk-ins from customers choosing by mood.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="partner-pricing" id="plans">
+      <div class="container">
+        <h2>Transparent Pricing</h2>
+        <p class="pricing-subtitle">Choose the plan that fits your needs</p>
+
+        <div class="pricing-cards">
+          <div class="pricing-card">
+            <h3>Basic Listing</h3>
+            <div class="pricing-price">Free</div>
+            <ul class="pricing-features">
+              <li>✓ Free restaurant profile</li>
+              <li>✓ Basic information</li>
+              <li>✓ Photo gallery</li>
+              <li>✓ Menu link</li>
+              <li>✗ Priority placement</li>
+              <li>✗ Analytics</li>
+            </ul>
+            <button class="secondary-button">Get Started</button>
+          </div>
+
+          <div class="pricing-card featured">
+            <div class="pricing-badge">Most Popular</div>
+            <h3>Featured Placement</h3>
+            <div class="pricing-price">$75<span>/month</span></div>
+            <ul class="pricing-features">
+              <li>✓ Everything in Basic</li>
+              <li>✓ Priority in moods</li>
+              <li>✓ Enhanced listing</li>
+              <li>✓ Analytics dashboard</li>
+              <li>✓ Support access</li>
+              <li>✗ Banner ads</li>
+            </ul>
+            <button class="cta-button">Upgrade Now</button>
+          </div>
+
+          <div class="pricing-card">
+            <h3>Sponsored Swipes</h3>
+            <div class="pricing-price">$125<span>/month</span></div>
+            <ul class="pricing-features">
+              <li>✓ Everything in Featured</li>
+              <li>✓ Sponsored badge</li>
+              <li>✓ Higher visibility</li>
+              <li>✓ Top of listings</li>
+              <li>✓ Priority support</li>
+              <li>✗ Banner ads</li>
+            </ul>
+            <button class="secondary-button">Upgrade Now</button>
+          </div>
+
+          <div class="pricing-card">
+            <h3>Banner Ads</h3>
+            <div class="pricing-price">$200<span>/month</span></div>
+            <ul class="pricing-features">
+              <li>✓ Everything in Sponsored</li>
+              <li>✓ Banner placement</li>
+              <li>✓ Featured + Sponsored</li>
+              <li>✓ Prime visibility</li>
+              <li>✓ Dedicated support</li>
+              <li>✓ Custom analytics</li>
+            </ul>
+            <button class="secondary-button">Upgrade Now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="partner-cta">
+      <div class="container">
+        <h2>Ready to Join Nibble?</h2>
+        <p>Start getting discovered by more customers today</p>
+        <button class="cta-button" onclick="goToPartnerSignup()">Sign Up Now</button>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>About</h4>
+          <a href="#">Company</a>
+          <a href="#">Blog</a>
+        </div>
+        <div class="footer-section">
+          <h4>Support</h4>
+          <a href="#">Contact</a>
+          <a href="#">FAQ</a>
+        </div>
+        <div class="footer-section">
+          <h4>For Restaurants</h4>
+          <a href="partner-landing.html">Partner Portal</a>
+          <a href="#">Pricing</a>
+        </div>
+        <div class="footer-section">
+          <h4>Legal</h4>
+          <a href="#">Terms</a>
+          <a href="#">Privacy</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Nibble. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+
+</html>

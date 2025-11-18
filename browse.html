@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse - Nibble</title>
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo"><a href="index.html">Nibble</a></div>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="browse.html" class="active">Browse</a></li>
+          <li><a href="partner-landing.html">For Restaurants</a></li>
+          <li><a href="#" id="sign-in-btn" class="sign-in-link">Sign In</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Browse Header -->
+    <section class="browse-header">
+      <div class="container">
+        <div class="breadcrumb">
+          <span class="mood-badge">🥰 Romantic Restaurants</span>
+          <span class="location">Vancouver, BC</span>
+          <span class="count">42 results</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filter Bar -->
+    <section class="filter-bar">
+      <div class="container">
+        <div class="filters">
+          <select class="filter-dropdown">
+            <option>All Cuisines</option>
+            <option>Italian</option>
+            <option>French</option>
+            <option>Sushi</option>
+            <option>Seafood</option>
+          </select>
+          <select class="filter-dropdown">
+            <option>All Prices</option>
+            <option>$ - Budget</option>
+            <option>$$ - Moderate</option>
+            <option>$$$ - Upscale</option>
+          </select>
+          <select class="filter-dropdown">
+            <option>Distance</option>
+            <option>0-1 km</option>
+            <option>1-5 km</option>
+            <option>5-15 km</option>
+          </select>
+          <select class="filter-dropdown">
+            <option>Rating</option>
+            <option>4.5+ Stars</option>
+            <option>4.0+ Stars</option>
+            <option>All Ratings</option>
+          </select>
+          <button class="view-toggle" id="mapToggle">Map View</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results-section">
+      <div class="container">
+        <!-- Sponsored Result -->
+        <div class="result-card sponsored">
+          <div class="sponsored-badge">SPONSORED</div>
+          <div class="result-image placeholder"></div>
+          <div class="result-content">
+            <div class="result-header">
+              <h3>The French Table</h3>
+              <button class="favorite-btn" onclick="toggleFavorite(this)">❤️</button>
+            </div>
+            <div class="result-meta">
+              <span class="rating">⭐⭐⭐⭐⭐ (127 reviews)</span>
+              <span class="cuisine">French • $$$</span>
+              <span class="distance">1.2 km away</span>
+            </div>
+            <p class="result-description">Intimate candlelit dining with French cuisine. Perfect for date nights and
+              special occasions.</p>
+            <button class="secondary-button" onclick="goToRestaurant('the-french-table')">View Details →</button>
+          </div>
+        </div>
+
+        <!-- Regular Result -->
+        <div class="result-card">
+          <div class="result-image placeholder"></div>
+          <div class="result-content">
+            <div class="result-header">
+              <h3>Bella Vista</h3>
+              <button class="favorite-btn" onclick="toggleFavorite(this)">🤍</button>
+            </div>
+            <div class="result-meta">
+              <span class="rating">⭐⭐⭐⭐½ (89 reviews)</span>
+              <span class="cuisine">Italian • $$</span>
+              <span class="distance">2.5 km away</span>
+            </div>
+            <p class="result-description">Rooftop restaurant with stunning Vancouver views. Romantic atmosphere with
+              great pasta selections.</p>
+            <button class="secondary-button" onclick="goToRestaurant('bella-vista')">View Details →</button>
+          </div>
+        </div>
+
+        <!-- Regular Result -->
+        <div class="result-card">
+          <div class="result-image placeholder"></div>
+          <div class="result-content">
+            <div class="result-header">
+              <h3>Waterfront Grill</h3>
+              <button class="favorite-btn" onclick="toggleFavorite(this)">🤍</button>
+            </div>
+            <div class="result-meta">
+              <span class="rating">⭐⭐⭐⭐ (156 reviews)</span>
+              <span class="cuisine">Seafood • $$$</span>
+              <span class="distance">3.1 km away</span>
+            </div>
+            <p class="result-description">Fresh seafood with waterfront views. Elegant ambiance perfect for romantic
+              dinners.</p>
+            <button class="secondary-button" onclick="goToRestaurant('waterfront-grill')">View Details →</button>
+          </div>
+        </div>
+
+        <!-- Regular Result -->
+        <div class="result-card">
+          <div class="result-image placeholder"></div>
+          <div class="result-content">
+            <div class="result-header">
+              <h3>Harvest Moon</h3>
+              <button class="favorite-btn" onclick="toggleFavorite(this)">🤍</button>
+            </div>
+            <div class="result-meta">
+              <span class="rating">⭐⭐⭐⭐ (92 reviews)</span>
+              <span class="cuisine">Farm-to-Table • $$</span>
+              <span class="distance">4.2 km away</span>
+            </div>
+            <p class="result-description">Seasonal menu with locally sourced ingredients. Warm and inviting atmosphere.
+            </p>
+            <button class="secondary-button" onclick="goToRestaurant('harvest-moon')">View Details →</button>
+          </div>
+        </div>
+
+        <div class="load-more">
+          <button class="secondary-button">Load More Results</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>About</h4>
+          <a href="#">Company</a>
+          <a href="#">Blog</a>
+        </div>
+        <div class="footer-section">
+          <h4>Support</h4>
+          <a href="#">Contact</a>
+          <a href="#">FAQ</a>
+        </div>
+        <div class="footer-section">
+          <h4>For Restaurants</h4>
+          <a href="partner-landing.html">Partner Portal</a>
+          <a href="#">Pricing</a>
+        </div>
+        <div class="footer-section">
+          <h4>Legal</h4>
+          <a href="#">Terms</a>
+          <a href="#">Privacy</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Nibble. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+
+</html>

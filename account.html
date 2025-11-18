@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account - Nibble</title>
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo"><a href="index.html">Nibble</a></div>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="browse.html">Browse</a></li>
+          <li><a href="partner-landing.html">For Restaurants</a></li>
+          <li><a href="account.html" class="active">Account</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Account Layout -->
+    <div class="account-container">
+      <!-- Sidebar -->
+      <aside class="account-sidebar">
+        <div class="user-profile">
+          <div class="user-avatar">JD</div>
+          <h3>John Doe</h3>
+          <p>john.doe@email.com</p>
+        </div>
+
+        <nav class="account-nav">
+          <a href="#" class="nav-item active" onclick="switchTab('dashboard')">📊 Dashboard</a>
+          <a href="#" class="nav-item" onclick="switchTab('favorites')">❤️ Favorites</a>
+          <a href="#" class="nav-item" onclick="switchTab('preferences')">📍 Preferences</a>
+          <a href="#" class="nav-item" onclick="switchTab('security')">🔐 Security</a>
+          <a href="#" class="nav-item" onclick="switchTab('notifications')">🔔 Notifications</a>
+        </nav>
+
+        <button class="secondary-button" style="width: 100%; margin-top: 2rem;">Sign Out</button>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="account-content">
+        <!-- Dashboard Tab -->
+        <div id="dashboard" class="account-tab active">
+          <div class="tab-header">
+            <h1>Dashboard</h1>
+            <button class="secondary-button" onclick="editProfile()">Edit Profile</button>
+          </div>
+
+          <div class="dashboard-cards">
+            <div class="stat-card">
+              <div class="stat-number">18</div>
+              <p>Saved Restaurants</p>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">42</div>
+              <p>Restaurants Visited</p>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">12</div>
+              <p>Reviews Left</p>
+            </div>
+          </div>
+
+          <div class="recent-activity">
+            <h3>Recent Activity</h3>
+            <div class="activity-item">
+              <span class="activity-date">Today</span>
+              <p>Saved <strong>Bella Vista</strong> to favorites</p>
+            </div>
+            <div class="activity-item">
+              <span class="activity-date">Yesterday</span>
+              <p>Visited <strong>The French Table</strong></p>
+            </div>
+            <div class="activity-item">
+              <span class="activity-date">2 days ago</span>
+              <p>Left a review for <strong>Waterfront Grill</strong></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Favorites Tab -->
+        <div id="favorites" class="account-tab">
+          <h1>My Favorites (18)</h1>
+
+          <div class="favorites-grid">
+            <div class="favorite-item">
+              <div class="fav-image placeholder"></div>
+              <h4>The French Table</h4>
+              <p class="rating">⭐⭐⭐⭐⭐</p>
+              <p class="fav-meta">French • $$$</p>
+              <button class="secondary-button">View</button>
+              <button class="remove-btn" onclick="removeFavorite(this)">Remove</button>
+            </div>
+
+            <div class="favorite-item">
+              <div class="fav-image placeholder"></div>
+              <h4>Bella Vista</h4>
+              <p class="rating">⭐⭐⭐⭐½</p>
+              <p class="fav-meta">Italian • $$</p>
+              <button class="secondary-button">View</button>
+              <button class="remove-btn" onclick="removeFavorite(this)">Remove</button>
+            </div>
+
+            <div class="favorite-item">
+              <div class="fav-image placeholder"></div>
+              <h4>Sushi Express</h4>
+              <p class="rating">⭐⭐⭐⭐</p>
+              <p class="fav-meta">Sushi • $$</p>
+              <button class="secondary-button">View</button>
+              <button class="remove-btn" onclick="removeFavorite(this)">Remove</button>
+            </div>
+
+            <div class="favorite-item">
+              <div class="fav-image placeholder"></div>
+              <h4>Harvest Moon</h4>
+              <p class="rating">⭐⭐⭐⭐</p>
+              <p class="fav-meta">Farm-to-Table • $$</p>
+              <button class="secondary-button">View</button>
+              <button class="remove-btn" onclick="removeFavorite(this)">Remove</button>
+            </div>
+
+            <div class="favorite-item">
+              <div class="fav-image placeholder"></div>
+              <h4>Waterfront Grill</h4>
+              <p class="rating">⭐⭐⭐⭐</p>
+              <p class="fav-meta">Seafood • $$$</p>
+              <button class="secondary-button">View</button>
+              <button class="remove-btn" onclick="removeFavorite(this)">Remove</button>
+            </div>
+
+            <div class="favorite-item">
+              <div class="fav-image placeholder"></div>
+              <h4>Cozy Corner Cafe</h4>
+              <p class="rating">⭐⭐⭐⭐½</p>
+              <p class="fav-meta">Cafe • $</p>
+              <button class="secondary-button">View</button>
+              <button class="remove-btn" onclick="removeFavorite(this)">Remove</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Preferences Tab -->
+        <div id="preferences" class="account-tab">
+          <h1>Preferences</h1>
+
+          <div class="preference-form">
+            <div class="form-group">
+              <label>Location</label>
+              <input type="text" value="Vancouver, BC" placeholder="City">
+            </div>
+
+            <div class="form-group">
+              <label>Dietary Restrictions</label>
+              <div class="checkbox-group">
+                <label><input type="checkbox"> Vegetarian</label>
+                <label><input type="checkbox"> Vegan</label>
+                <label><input type="checkbox"> Gluten-Free</label>
+                <label><input type="checkbox"> Halal</label>
+                <label><input type="checkbox"> Kosher</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Preferred Price Range</label>
+              <div class="radio-group">
+                <label><input type="radio" name="price"> $ - Budget</label>
+                <label><input type="radio" name="price"> $$ - Moderate</label>
+                <label><input type="radio" name="price"> $$$ - Upscale</label>
+              </div>
+            </div>
+
+            <button class="cta-button">Save Preferences</button>
+          </div>
+        </div>
+
+        <!-- Security Tab -->
+        <div id="security" class="account-tab">
+          <h1>Security</h1>
+
+          <div class="security-section">
+            <h3>Password</h3>
+            <button class="secondary-button" onclick="changePassword()">Change Password</button>
+          </div>
+
+          <div class="security-section">
+            <h3>Connected Devices</h3>
+            <div class="device-item">
+              <p><strong>MacBook Pro</strong> • Last active today</p>
+              <button class="remove-btn">Remove</button>
+            </div>
+            <div class="device-item">
+              <p><strong>iPhone 13</strong> • Last active 2 hours ago</p>
+              <button class="remove-btn">Remove</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Notifications Tab -->
+        <div id="notifications" class="account-tab">
+          <h1>Notifications</h1>
+
+          <div class="notification-settings">
+            <div class="notification-item">
+              <div>
+                <h4>New Restaurant Recommendations</h4>
+                <p>Get notified when new restaurants match your moods</p>
+              </div>
+              <input type="checkbox" checked>
+            </div>
+
+            <div class="notification-item">
+              <div>
+                <h4>Promotions & Offers</h4>
+                <p>Special deals from your saved restaurants</p>
+              </div>
+              <input type="checkbox" checked>
+            </div>
+
+            <div class="notification-item">
+              <div>
+                <h4>Email Notifications</h4>
+                <p>Receive updates via email</p>
+              </div>
+              <input type="checkbox">
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>About</h4>
+          <a href="#">Company</a>
+          <a href="#">Blog</a>
+        </div>
+        <div class="footer-section">
+          <h4>Support</h4>
+          <a href="#">Contact</a>
+          <a href="#">FAQ</a>
+        </div>
+        <div class="footer-section">
+          <h4>For Restaurants</h4>
+          <a href="partner-landing.html">Partner Portal</a>
+          <a href="#">Pricing</a>
+        </div>
+        <div class="footer-section">
+          <h4>Legal</h4>
+          <a href="#">Terms</a>
+          <a href="#">Privacy</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Nibble. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+
+</html>
