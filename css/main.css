@@ -139,7 +139,7 @@ section {
   background-color: transparent;
   color: #fff;
   border-radius: 4px;
-  border: 1px solid #fff;
+  border: none;
   font-weight: 600;
   transition: color 0.3s;
 }
@@ -147,10 +147,8 @@ section {
 .sign-in-link:hover {
   background-color: transparent;
   color: #fff;
-  border: 1px solid #fff;
-}
-
-/* ===========================
+  border: none;
+} /* ===========================
    BUTTONS
    =========================== */
 
@@ -1616,11 +1614,9 @@ section {
   text-align: center;
   padding-top: 1.5rem;
   border-top: 1px solid #e8e8e8;
-  color: #fef9f3;
+  color: #fff;
   font-size: 0.9rem;
-}
-
-/* ===========================
+} /* ===========================
    UTILITY - PLACEHOLDER
    =========================== */
 
