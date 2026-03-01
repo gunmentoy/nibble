@@ -1,0 +1,109 @@
+@page
+@model NibbleApp.Pages.Restaurants.IndexModel
+
+@{
+    ViewData["Title"] = "Restaurants";
+}
+
+<h2>Restaurants</h2>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<form asp-page="./Index" method="get">
+    <div class="form-actions no-color">
+        <p>
+            <select name="restaurantMood" asp-items="Model.MoodTags">
+                <option value="">All Moods</option>
+            </select>
+            Name: <input type="text" name="searchString" value="@Model.CurrentFilter" />
+            <input type="submit" value="Filter" class="btn btn-primary" /> |
+            <a asp-page="./Index">Back to full List</a>
+        </p>
+    </div>
+</form>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <a asp-page="./Index" asp-route-sortOrder="@Model.NameSort"
+                   asp-route-currentFilter="@Model.CurrentFilter">
+                    @Html.DisplayNameFor(model => model.Restaurant[0].Name)
+                </a>
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Restaurant[0].Cuisine)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Restaurant[0].MoodTag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Restaurant[0].PriceRange)
+            </th>
+            <th>
+                <a asp-page="./Index" asp-route-sortOrder="@Model.RatingSort"
+                   asp-route-currentFilter="@Model.CurrentFilter">
+                    @Html.DisplayNameFor(model => model.Restaurant[0].Rating)
+                </a>
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Restaurant[0].Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Restaurant[0].IsSponsored)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Restaurant)
+{
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cuisine)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MoodTag)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PriceRange)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rating)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsSponsored)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.RestaurantId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.RestaurantId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.RestaurantId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+@{
+    var prevDisabled = !Model.Restaurant.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.Restaurant.HasNextPage ? "disabled" : "";
+}
+<a asp-page="./Index"
+   asp-route-sortOrder="@Model.CurrentSort"
+   asp-route-pageIndex="@(Model.Restaurant.PageIndex - 1)"
+   asp-route-currentFilter="@Model.CurrentFilter"
+   class="btn btn-primary @prevDisabled">
+    Previous
+</a>
+<a asp-page="./Index"
+   asp-route-sortOrder="@Model.CurrentSort"
+   asp-route-pageIndex="@(Model.Restaurant.PageIndex + 1)"
+   asp-route-currentFilter="@Model.CurrentFilter"
+   class="btn btn-primary @nextDisabled">
+    Next
+</a>
